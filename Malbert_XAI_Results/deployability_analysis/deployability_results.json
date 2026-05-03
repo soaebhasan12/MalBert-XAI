@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-23 07:29:47",
+  "device": "cuda",
+  "model_file_size_mb": 319.17,
+  "model_memory_mb": 319.11,
+  "total_params": 83652872,
+  "component_params": {
+    "distilbert": 66362880,
+    "view_projections": 2368512,
+    "fusion": 14328193,
+    "binary": 296066,
+    "family": 297221
+  },
+  "inference_time_ms": {
+    "mean": 59.471,
+    "std": 0.983,
+    "min": 56.618,
+    "max": 63.203,
+    "p95": 61.288
+  },
+  "memory_mb": {
+    "gpu_peak": 352.55,
+    "cpu_delta": 0.0,
+    "model_weights": 319.11
+  },
+  "accuracy": {
+    "binary_accuracy": 98.63,
+    "binary_auc": 99.89
+  }
+}

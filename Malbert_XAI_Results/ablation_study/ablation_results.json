@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-04-24 02:17:13",
+  "test_size": 3129,
+  "device": "cuda",
+  "baseline": {
+    "binary_f1": 0.9863339565235203,
+    "family_f1": 0.9646284738284446,
+    "binary_acc": 0.9862575902844359,
+    "family_acc": 0.9648449984020454
+  },
+  "experiments": {
+    "Only PERM": {
+      "active_views": [
+        "PERM"
+      ],
+      "num_views": 1,
+      "binary_f1": 0.78292,
+      "family_f1": 0.539459,
+      "binary_acc": 0.821349,
+      "family_acc": 0.548738,
+      "binary_f1_drop": 0.203414,
+      "family_f1_drop": 0.425169
+    },
+    "Only API": {
+      "active_views": [
+        "API"
+      ],
+      "num_views": 1,
+      "binary_f1": 0.894944,
+      "family_f1": 0.572534,
+      "binary_acc": 0.901566,
+      "family_acc": 0.571748,
+      "binary_f1_drop": 0.09139,
+      "family_f1_drop": 0.392095
+    },
+    "Only INTENT": {
+      "active_views": [
+        "INTENT"
+      ],
+      "num_views": 1,
+      "binary_f1": 0.642429,
+      "family_f1": 0.510834,
+      "binary_acc": 0.749441,
+      "family_acc": 0.5628,
+      "binary_f1_drop": 0.343905,
+      "family_f1_drop": 0.453794
+    },
+    "Only OPCODE": {
+      "active_views": [
+        "OPCODE"
+      ],
+      "num_views": 1,
+      "binary_f1": 0.825065,
+      "family_f1": 0.236431,
+      "binary_acc": 0.818472,
+      "family_acc": 0.340684,
+      "binary_f1_drop": 0.161269,
+      "family_f1_drop": 0.728198
+    },
+    "PERM + API": {
+      "active_views": [
+        "PERM",
+        "API"
+      ],
+      "num_views": 2,
+      "binary_f1": 0.976849,
+      "family_f1": 0.922045,
+      "binary_acc": 0.976989,
+      "family_acc": 0.920741,
+      "binary_f1_drop": 0.009485,
+      "family_f1_drop": 0.042584
+    },
+    "API + OPCODE": {
+      "active_views": [
+        "API",
+        "OPCODE"
+      ],
+      "num_views": 2,
+      "binary_f1": 0.900499,
+      "family_f1": 0.686035,
+      "binary_acc": 0.896453,
+      "family_acc": 0.694151,
+      "binary_f1_drop": 0.085835,
+      "family_f1_drop": 0.278593
+    },
+    "PERM + OPCODE": {
+      "active_views": [
+        "PERM",
+        "OPCODE"
+      ],
+      "num_views": 2,
+      "binary_f1": 0.949939,
+      "family_f1": 0.759366,
+      "binary_acc": 0.951422,
+      "family_acc": 0.770534,
+      "binary_f1_drop": 0.036395,
+      "family_f1_drop": 0.205262
+    },
+    "No PERM (API+INT+OPC)": {
+      "active_views": [
+        "API",
+        "INTENT",
+        "OPCODE"
+      ],
+      "num_views": 3,
+      "binary_f1": 0.955543,
+      "family_f1": 0.903834,
+      "binary_acc": 0.954618,
+      "family_acc": 0.903164,
+      "binary_f1_drop": 0.03079,
+      "family_f1_drop": 0.060794
+    },
+    "No API (PER+INT+OPC)": {
+      "active_views": [
+        "PERM",
+        "INTENT",
+        "OPCODE"
+      ],
+      "num_views": 3,
+      "binary_f1": 0.969882,
+      "family_f1": 0.891426,
+      "binary_acc": 0.970278,
+      "family_acc": 0.893896,
+      "binary_f1_drop": 0.016451,
+      "family_f1_drop": 0.073202
+    },
+    "No INTENT (PER+API+OPC)": {
+      "active_views": [
+        "PERM",
+        "API",
+        "OPCODE"
+      ],
+      "num_views": 3,
+      "binary_f1": 0.979054,
+      "family_f1": 0.939036,
+      "binary_acc": 0.978907,
+      "family_acc": 0.939597,
+      "binary_f1_drop": 0.00728,
+      "family_f1_drop": 0.025592
+    },
+    "No OPCODE (PER+API+INT)": {
+      "active_views": [
+        "PERM",
+        "API",
+        "INTENT"
+      ],
+      "num_views": 3,
+      "binary_f1": 0.98462,
+      "family_f1": 0.960363,
+      "binary_acc": 0.98466,
+      "family_acc": 0.960371,
+      "binary_f1_drop": 0.001714,
+      "family_f1_drop": 0.004265
+    },
+    "Full Model (all 4)": {
+      "active_views": [
+        "PERM",
+        "API",
+        "INTENT",
+        "OPCODE"
+      ],
+      "num_views": 4,
+      "binary_f1": 0.986334,
+      "family_f1": 0.964628,
+      "binary_acc": 0.986258,
+      "family_acc": 0.964845,
+      "binary_f1_drop": 0.0,
+      "family_f1_drop": 0.0
+    }
+  },
+  "key_findings": {
+    "best_single_view": "Only API",
+    "best_single_f1": 0.894944,
+    "most_important_view": "No PERM (API+INT+OPC)",
+    "least_important_view": "No OPCODE (PER+API+INT)",
+    "multiview_gain_over_best_single": 0.09139,
+    "gain_over_ref_paper": 0.070334
+  }
+}

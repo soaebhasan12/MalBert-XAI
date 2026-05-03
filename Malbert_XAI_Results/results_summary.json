@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-04-14 23:04:43",
+  "dataset": "/content/drive/MyDrive/00 MalBert - Internship Project/00_final_dataset_multiview.csv",
+  "dataset_size": 15644,
+  "train_size": 10950,
+  "val_size": 1565,
+  "test_size": 3129,
+  "binary_accuracy": 0.9862575902844359,
+  "binary_f1": 0.9863339565235203,
+  "binary_precision": 0.9865997344541071,
+  "binary_recall": 0.9862575902844359,
+  "binary_auc": 0.9988717636573119,
+  "family_accuracy": 0.9648449984020454,
+  "family_f1": 0.9646284738284446,
+  "family_precision": 0.9650868862401517,
+  "family_recall": 0.9648449984020454,
+  "view_attention_global": {
+    "PERM": 0.25594720244407654,
+    "API": 0.2730674147605896,
+    "INTENT": 0.2614031434059143,
+    "OPCODE": 0.2095819115638733
+  },
+  "families": [
+    "Adware",
+    "Banking",
+    "Benign",
+    "Riskware",
+    "SMS"
+  ],
+  "epochs_trained": 7,
+  "model_params": 83652872,
+  "config": {
+    "bert_model": "distilbert-base-uncased",
+    "max_seq_length": 512,
+    "fusion_heads": 8,
+    "fusion_layers": 2,
+    "batch_size": 8,
+    "learning_rate": 3e-05,
+    "dropout": 0.3
+  }
+}

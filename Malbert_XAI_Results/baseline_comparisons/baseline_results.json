@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-27 07:44:06",
+  "dataset_size": 15644,
+  "test_size": 3129,
+  "tfidf_features": 50000,
+  "models": {
+    "Single DistilBERT": {
+      "binary_accuracy": 0.98466,
+      "binary_f1": 0.984673,
+      "binary_auc": 0.998301,
+      "family_accuracy": 0.963567,
+      "family_f1": 0.963384,
+      "train_time_seconds": 3915,
+      "model_type": "transformer_single_view"
+    },
+    "MalBERT-XAI (Ours)": {
+      "binary_accuracy": 0.986258,
+      "binary_f1": 0.986334,
+      "binary_auc": 0.998872,
+      "family_accuracy": 0.964845,
+      "family_f1": 0.964628,
+      "train_time_seconds": null,
+      "model_type": "transformer_multi_view"
+    },
+    "Decision Tree": {
+      "binary_accuracy": 0.9732,
+      "binary_f1": 0.9731,
+      "binary_auc": 0.0,
+      "family_accuracy": 0.9402,
+      "family_f1": 0.9403,
+      "train_time_seconds": 74.9,
+      "model_type": "traditional_ml"
+    },
+    "Random Forest": {
+      "binary_accuracy": 0.9827,
+      "binary_f1": 0.9828,
+      "binary_auc": 0.9977,
+      "family_accuracy": 0.9623,
+      "family_f1": 0.9621,
+      "train_time_seconds": 167.8,
+      "model_type": "traditional_ml"
+    },
+    "XGBoost": {
+      "binary_accuracy": null,
+      "binary_f1": null,
+      "binary_auc": null,
+      "family_accuracy": null,
+      "family_f1": null,
+      "train_time_seconds": null,
+      "model_type": "traditional_ml"
+    }
+  },
+  "key_findings": {
+    "best_traditional": "Random Forest",
+    "best_trad_binary_f1": 0.9828,
+    "malbert_gain_over_best_trad": 0.003534,
+    "malbert_gain_over_single_distilbert": 0.001661,
+    "multi_view_proven_better": true
+  }
+}
